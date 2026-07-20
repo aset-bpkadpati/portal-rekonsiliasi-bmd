@@ -3,7 +3,7 @@
   Tempel URL Google Sheet milik setiap OPD pada properti `url`.
   Bila `url` masih kosong, kartu OPD akan tampil namun tidak bisa dibuka.
 */
-const KERTAS_KERJA_URL = Object.fromEntries(`Badan Kepegawaian Dan Pengembangan SDM|https://docs.google.com/spreadsheets/d/1kHsq_ySBruqjKeKmzjoFfNeFbshnrRBnG3z_VoYfypM/edit?usp=drivesdk
+const KERTAS_KERJA_URL_LAMA = Object.fromEntries(`Badan Kepegawaian Dan Pengembangan SDM|https://docs.google.com/spreadsheets/d/1kHsq_ySBruqjKeKmzjoFfNeFbshnrRBnG3z_VoYfypM/edit?usp=drivesdk
 Badan Kesatuan Bangsa dan Politik|https://docs.google.com/spreadsheets/d/1SzpTXucsDzhqkoEmrY4xFRvVNzfN3XT-3Lmysn1-0gM/edit?usp=drivesdk
 Badan Penanggulangan Bencana Daerah|https://docs.google.com/spreadsheets/d/1-QMvENmwzo-Ek-AG3OJImDxqMwmKtW0ZDPOEQCRmxGY/edit?usp=drivesdk
 Badan Pengelolaan Keuangan dan Aset Daerah|https://docs.google.com/spreadsheets/d/1iFb-74YSzc4LSlEWF8F4WRBKk2wCiwrWWr_Xg1TtvxY/edit?usp=drivesdk
@@ -134,6 +134,55 @@ UPTD PENDIDIKAN SMP TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1y8MjfPV33
 UPTD PENDIDIKAN SMP TRANGKIL|https://docs.google.com/spreadsheets/d/13ZSqrMyMjqGDGVvgVTWdY3Pi_faw4OucBw1S03fNvUU/edit?usp=drivesdk
 UPTD PENDIDIKAN SMP WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1JdpqtJXOFy8KjUdrAWfRpww_IVDbN4d6-BF9hmZpgLU/edit?usp=drivesdk
 UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1ZVJA7xN2VVXPG1rNfJgUidiAqmXoh2WS5EyzB7s1tNk/edit?usp=drivesdk`.trim().split('\n').map(row => row.split('|')));
+
+// ID terbaru berikut dipakai untuk Triwulan I dan II.
+// Perangkat daerah yang tidak tercantum tetap menggunakan ID sebelumnya.
+const KERTAS_KERJA_URL_TERBARU = Object.fromEntries(`SANGGAR KEGIATAN BELAJAR KAB. PATI|https://docs.google.com/spreadsheets/d/1K7sic12JOlsT_7eVjkao-ZKjR9MouwMz5xdkfPH3Q3I/edit?usp=drivesdk
+Taman Kanak Kanak Negeri Pati|https://docs.google.com/spreadsheets/d/1MSvsEddSmmpcnwzGY4zSuBTmfEM9PRJEgf-zzK5XyQ0/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN BATANGAN|https://docs.google.com/spreadsheets/d/1GlKNEWlABPHc2HCb8lRPS6CR5sf0E33MBVvMTqkQ1Qg/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN CLUWAK|https://docs.google.com/spreadsheets/d/174WL2jawWX1M9PtNin4-uEaW4PBTHc1Rtwcb3oFtR8I/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN DUKUHSETI|https://docs.google.com/spreadsheets/d/1fbkrm7YSDDEqCo1PShv7aKTX7zajOrNYEKmP6UEI7wk/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GABUS|https://docs.google.com/spreadsheets/d/1sZ0__jW2C8ZxZtfwvmk4T3BgmgYTY9SYFAgOBP9DsKI/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GEMBONG|https://docs.google.com/spreadsheets/d/1GbrJ0oyO8VchWGa0gheUoJZR6q7fKU2iqZ-rU2EBtc8/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1D6r0bsLO_WPwS-KS-QOjpyG-oWAqqX6SZBkALkkmCHc/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JAKEN|https://docs.google.com/spreadsheets/d/1887LYDwR2yJh65mZpE7eJSJC1RKobS8fZJ9Ew7Kdvnc/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JAKENAN|https://docs.google.com/spreadsheets/d/1TRBKKzYkMUU8dbLyy9kzKPJUm-pYSjbmqB1aLTmzhgo/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JUWANA|https://docs.google.com/spreadsheets/d/1f3Bi82zS28ACL_7CcFJjN-yUPla36gjAcMPT5wVXg78/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN KAYEN|https://docs.google.com/spreadsheets/d/1IGdSIk_hdJDFW1cXYuOBLxL28SQ3Qr-G-3ploOtKzPA/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN MARGOREJO|https://docs.google.com/spreadsheets/d/1G66DnTHAi-SRNCOHmnvdW_Cg1HDtQByNJKoXuT9t_mM/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN MARGOYOSO|https://docs.google.com/spreadsheets/d/1ZX2f1QWZoikAX_mwBT13OJEIvohP2iG3e9qhzPtFRxE/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN PATI|https://docs.google.com/spreadsheets/d/1-YxR4NGuB4LLvM3NS9Q5W0O5kEpV44F2BsgoJHPjQ4A/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN PUCAKWANGI|https://docs.google.com/spreadsheets/d/15ZMqaglwbmRyGZdVO2dmeG9Ra7ekSoKkSQtsbyHaEv8/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN SUKOLILO|https://docs.google.com/spreadsheets/d/1ndQy-vjzN2aD_kPjs3Wh5n9z0OrY3ab5cYmb0FLKVW0/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TAMBAKROMO|https://docs.google.com/spreadsheets/d/16IOMh-lwR5Fv7daVacHYAYYT_JKIKPOytdrXNtwsS_s/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TAYU|https://docs.google.com/spreadsheets/d/1DeE0ovFYY6es44mPHFfRjHcsIhtooPRvm9x0gMsD_zM/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1jOkmR-nwrirNgRKICNzZtMLXCWf52mliqEwWPbX_F70/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TRANGKIL|https://docs.google.com/spreadsheets/d/1t0w6Lnehs5Dq0wQ795ogOF-Iv9F-geVmM_5jbD1_CLk/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1HOqR7aNwo5u_tPKwsOWL2K12zMeQ917xjfYSrMslrcY/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN WINONG|https://docs.google.com/spreadsheets/d/1tgMI3vE3P4a06ikcmPq5Py1h5Pv7uCqnXuRsJM55D-o/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP BATANGAN|https://docs.google.com/spreadsheets/d/1ngdmmm6i79vxGGwWwusoF7WyVbnQEMsb48s17z1_Ags/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP CLUWAK|https://docs.google.com/spreadsheets/d/1c7EnwxUpGaezmDPSfHiHLFRPWZFcmIEbIf4EflSVK_4/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP DUKUHSETI|https://docs.google.com/spreadsheets/d/10opAv7dc-EawEsKYbpFeK1fIXrkbRrlqcK_ImJz2-TQ/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GABUS|https://docs.google.com/spreadsheets/d/1dU7XOBOuEikOR1LTL1T7KntroN_DdjdTNO1nJQirZPc/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GEMBONG|https://docs.google.com/spreadsheets/d/1JrxGj1fyqRerSJvjrX5xJWmZLJ2RKEDsxHWovThSCfI/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1NWfIajQftoIIXQsOcWloRYQjIaEtlQdx7kJMXv3BGTI/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JAKEN|https://docs.google.com/spreadsheets/d/1GPhEaVEoQloOvI-UBuT3S1BxI3n5q7KBjOrH7TVsOhA/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JAKENAN|https://docs.google.com/spreadsheets/d/1Ms65KRPIZ3YywmlEJmYPJOr8iv3GBgTGYJLyh6u9mso/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JUWANA|https://docs.google.com/spreadsheets/d/1Iinn6ptRS_ZgfHUh7aCg7thloYM36uc6puq0jY6L1Fc/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP KAYEN|https://docs.google.com/spreadsheets/d/1fYnpM53loPMaAHz7L9YQyFsmCTJh-8_vx4Q4TiQLXK0/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP MARGOREJO|https://docs.google.com/spreadsheets/d/1Xz7UxNZcMb4WQdy9p2g9PW6txpeB3ffQJw6oEkoCRVo/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP MARGOYOSO|https://docs.google.com/spreadsheets/d/1MvYrNvc1WXGhtXBB2ZCXRXQjhHz0e9J8WM2WAOtAqro/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP PATI|https://docs.google.com/spreadsheets/d/1fnLOK5xa9cr9bYMnfELLXhkrQE6vQhAMFqKxioZJ88g/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP PUCAKWANGI|https://docs.google.com/spreadsheets/d/14MRBpfLmQfRd12CbdwBURfaTmCi_yuCealEQyA-ZnCg/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP SUKOLILO|https://docs.google.com/spreadsheets/d/1oWT9bmq-2skOBWHWAuE4unCobW7sK7Qi6-BVib7vlCw/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TAMBAKROMO|https://docs.google.com/spreadsheets/d/1Lq1LkQ24vF8dYNIi2svbpjbn-FJygPUd22C9NQWUu9I/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TAYU|https://docs.google.com/spreadsheets/d/1SFXFxIkyGHES7Dcb342s_xN7jHIHF3SxVmmUiRDm_wU/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1hXJCZMPn2vQBgPwShuhLxBdW3hGEu1fqgqvoGJOjX7s/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TRANGKIL|https://docs.google.com/spreadsheets/d/1Z66P7plaPAJcdok09d92oliChQjE2DROqG-3xH1f2xM/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1OJkqNnYnlVt947v3bmJcNizELQTj9e9BLTEiVMV43DA/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1wR7QtvOoSUjS_ncfNx9AryNJXJGLWTsmUaHKmgg24GU/edit?usp=drivesdk
+Dinas Pendidikan dan Kebudayaan|https://docs.google.com/spreadsheets/d/1V8I8-ve_N896BAIfCZ-8_8m7RJVV4gCXrExN9-iAnOI/edit?usp=drivesdk`.trim().split('\n').map(row => row.split('|')));
+const KERTAS_KERJA_URL = {...KERTAS_KERJA_URL_LAMA, ...KERTAS_KERJA_URL_TERBARU};
 
 const OPD_DISPLAY_NAMES = Object.fromEntries(`Badan Kepegawaian Dan Pengembangan SDM|BKPSDM
 Badan Kesatuan Bangsa dan Politik|Bakesbangpol
@@ -320,6 +369,17 @@ function bindForm() {
     const message = form.querySelector('.form-message');
     const button = form.querySelector('button[type="submit"]');
     const data = Object.fromEntries(new FormData(form).entries());
+    const files = Object.values(data).filter(value => value instanceof File && value.size);
+    const maxFileSize = 8 * 1024 * 1024;
+    const maxTotalSize = 24 * 1024 * 1024;
+    if (files.some(file => file.type !== 'application/pdf' || !file.name.toLowerCase().endsWith('.pdf'))) {
+      alert('Semua dokumen harus berupa file PDF.');
+      return;
+    }
+    if (files.some(file => file.size > maxFileSize) || files.reduce((total, file) => total + file.size, 0) > maxTotalSize) {
+      alert('Ukuran maksimal adalah 8 MB per file dan 24 MB untuk seluruh dokumen.');
+      return;
+    }
     for (const [key, value] of Object.entries(data)) {
       if (value instanceof File) data[key] = value.size ? await new Promise((resolve, reject) => { const reader = new FileReader(); reader.onload = () => resolve({name:value.name,type:value.type,data:reader.result}); reader.onerror = reject; reader.readAsDataURL(value); }) : null;
     }
@@ -332,18 +392,24 @@ function bindForm() {
     }
     button.disabled = true; button.textContent = 'Mengirim...';
     try {
-      // Endpoint Apps Script contoh menerima metadata. Sesuaikan Apps Script jika file perlu ikut disimpan ke Drive.
-      await fetch(endpoint, {method:'POST', mode:'no-cors', body:JSON.stringify(data)});
+      const response = await fetch(endpoint, {method:'POST', headers:{'Content-Type':'text/plain;charset=utf-8'}, body:JSON.stringify(data)});
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const result = await response.json();
+      if (!result.success) throw new Error(result.error || 'Server menolak dokumen.');
       message.innerHTML = '<i class="bx bx-check-circle"></i> Dokumen berhasil dikirim.';
       message.style.display = 'block'; form.reset();
-    } catch (_) { alert('Pengiriman belum berhasil. Silakan coba kembali atau hubungi admin.'); }
+    } catch (error) {
+      console.error(error);
+      alert(`Pengiriman belum berhasil: ${error.message || 'silakan coba kembali atau hubungi admin.'}`);
+    }
     button.disabled = false; button.innerHTML = 'Kirim Dokumen <i class="bx bx-send"></i>';
   });
 }
 function pageContext() {
   const params = new URLSearchParams(location.search);
   const period = params.get('triwulan') === 'II' ? 'II' : 'I';
-  const type = params.get('jenis') || 'aset-tetap';
+  const requestedType = params.get('jenis') || 'aset-tetap';
+  const type = ['aset-tetap','persediaan','penyusutan'].includes(requestedType) ? requestedType : 'aset-tetap';
   if (type === 'penyusutan' && period === 'I') {
     location.replace('pelaporan.html?triwulan=I');
     return;
