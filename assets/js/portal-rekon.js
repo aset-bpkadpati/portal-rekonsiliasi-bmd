@@ -137,51 +137,51 @@ UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1ZVJA7xN2VVXPG
 
 // ID terbaru berikut dipakai untuk Triwulan I dan II.
 // Perangkat daerah yang tidak tercantum tetap menggunakan ID sebelumnya.
-const KERTAS_KERJA_URL_TERBARU = Object.fromEntries(`SANGGAR KEGIATAN BELAJAR KAB. PATI|https://docs.google.com/spreadsheets/d/1K7sic12JOlsT_7eVjkao-ZKjR9MouwMz5xdkfPH3Q3I/edit?usp=drivesdk
-Taman Kanak Kanak Negeri Pati|https://docs.google.com/spreadsheets/d/1MSvsEddSmmpcnwzGY4zSuBTmfEM9PRJEgf-zzK5XyQ0/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN BATANGAN|https://docs.google.com/spreadsheets/d/1GlKNEWlABPHc2HCb8lRPS6CR5sf0E33MBVvMTqkQ1Qg/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN CLUWAK|https://docs.google.com/spreadsheets/d/174WL2jawWX1M9PtNin4-uEaW4PBTHc1Rtwcb3oFtR8I/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN DUKUHSETI|https://docs.google.com/spreadsheets/d/1fbkrm7YSDDEqCo1PShv7aKTX7zajOrNYEKmP6UEI7wk/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN GABUS|https://docs.google.com/spreadsheets/d/1sZ0__jW2C8ZxZtfwvmk4T3BgmgYTY9SYFAgOBP9DsKI/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN GEMBONG|https://docs.google.com/spreadsheets/d/1GbrJ0oyO8VchWGa0gheUoJZR6q7fKU2iqZ-rU2EBtc8/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1D6r0bsLO_WPwS-KS-QOjpyG-oWAqqX6SZBkALkkmCHc/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN JAKEN|https://docs.google.com/spreadsheets/d/1887LYDwR2yJh65mZpE7eJSJC1RKobS8fZJ9Ew7Kdvnc/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN JAKENAN|https://docs.google.com/spreadsheets/d/1TRBKKzYkMUU8dbLyy9kzKPJUm-pYSjbmqB1aLTmzhgo/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN JUWANA|https://docs.google.com/spreadsheets/d/1f3Bi82zS28ACL_7CcFJjN-yUPla36gjAcMPT5wVXg78/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN KAYEN|https://docs.google.com/spreadsheets/d/1IGdSIk_hdJDFW1cXYuOBLxL28SQ3Qr-G-3ploOtKzPA/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN MARGOREJO|https://docs.google.com/spreadsheets/d/1G66DnTHAi-SRNCOHmnvdW_Cg1HDtQByNJKoXuT9t_mM/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN MARGOYOSO|https://docs.google.com/spreadsheets/d/1ZX2f1QWZoikAX_mwBT13OJEIvohP2iG3e9qhzPtFRxE/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN PATI|https://docs.google.com/spreadsheets/d/1-YxR4NGuB4LLvM3NS9Q5W0O5kEpV44F2BsgoJHPjQ4A/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN PUCAKWANGI|https://docs.google.com/spreadsheets/d/15ZMqaglwbmRyGZdVO2dmeG9Ra7ekSoKkSQtsbyHaEv8/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN SUKOLILO|https://docs.google.com/spreadsheets/d/1ndQy-vjzN2aD_kPjs3Wh5n9z0OrY3ab5cYmb0FLKVW0/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN TAMBAKROMO|https://docs.google.com/spreadsheets/d/16IOMh-lwR5Fv7daVacHYAYYT_JKIKPOytdrXNtwsS_s/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN TAYU|https://docs.google.com/spreadsheets/d/1DeE0ovFYY6es44mPHFfRjHcsIhtooPRvm9x0gMsD_zM/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1jOkmR-nwrirNgRKICNzZtMLXCWf52mliqEwWPbX_F70/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN TRANGKIL|https://docs.google.com/spreadsheets/d/1t0w6Lnehs5Dq0wQ795ogOF-Iv9F-geVmM_5jbD1_CLk/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1HOqR7aNwo5u_tPKwsOWL2K12zMeQ917xjfYSrMslrcY/edit?usp=drivesdk
-UPTD PENDIDIKAN KECAMATAN WINONG|https://docs.google.com/spreadsheets/d/1tgMI3vE3P4a06ikcmPq5Py1h5Pv7uCqnXuRsJM55D-o/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP BATANGAN|https://docs.google.com/spreadsheets/d/1ngdmmm6i79vxGGwWwusoF7WyVbnQEMsb48s17z1_Ags/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP CLUWAK|https://docs.google.com/spreadsheets/d/1c7EnwxUpGaezmDPSfHiHLFRPWZFcmIEbIf4EflSVK_4/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP DUKUHSETI|https://docs.google.com/spreadsheets/d/10opAv7dc-EawEsKYbpFeK1fIXrkbRrlqcK_ImJz2-TQ/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP GABUS|https://docs.google.com/spreadsheets/d/1dU7XOBOuEikOR1LTL1T7KntroN_DdjdTNO1nJQirZPc/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP GEMBONG|https://docs.google.com/spreadsheets/d/1JrxGj1fyqRerSJvjrX5xJWmZLJ2RKEDsxHWovThSCfI/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1NWfIajQftoIIXQsOcWloRYQjIaEtlQdx7kJMXv3BGTI/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP JAKEN|https://docs.google.com/spreadsheets/d/1GPhEaVEoQloOvI-UBuT3S1BxI3n5q7KBjOrH7TVsOhA/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP JAKENAN|https://docs.google.com/spreadsheets/d/1Ms65KRPIZ3YywmlEJmYPJOr8iv3GBgTGYJLyh6u9mso/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP JUWANA|https://docs.google.com/spreadsheets/d/1Iinn6ptRS_ZgfHUh7aCg7thloYM36uc6puq0jY6L1Fc/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP KAYEN|https://docs.google.com/spreadsheets/d/1fYnpM53loPMaAHz7L9YQyFsmCTJh-8_vx4Q4TiQLXK0/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP MARGOREJO|https://docs.google.com/spreadsheets/d/1Xz7UxNZcMb4WQdy9p2g9PW6txpeB3ffQJw6oEkoCRVo/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP MARGOYOSO|https://docs.google.com/spreadsheets/d/1MvYrNvc1WXGhtXBB2ZCXRXQjhHz0e9J8WM2WAOtAqro/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP PATI|https://docs.google.com/spreadsheets/d/1fnLOK5xa9cr9bYMnfELLXhkrQE6vQhAMFqKxioZJ88g/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP PUCAKWANGI|https://docs.google.com/spreadsheets/d/14MRBpfLmQfRd12CbdwBURfaTmCi_yuCealEQyA-ZnCg/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP SUKOLILO|https://docs.google.com/spreadsheets/d/1oWT9bmq-2skOBWHWAuE4unCobW7sK7Qi6-BVib7vlCw/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP TAMBAKROMO|https://docs.google.com/spreadsheets/d/1Lq1LkQ24vF8dYNIi2svbpjbn-FJygPUd22C9NQWUu9I/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP TAYU|https://docs.google.com/spreadsheets/d/1SFXFxIkyGHES7Dcb342s_xN7jHIHF3SxVmmUiRDm_wU/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1hXJCZMPn2vQBgPwShuhLxBdW3hGEu1fqgqvoGJOjX7s/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP TRANGKIL|https://docs.google.com/spreadsheets/d/1Z66P7plaPAJcdok09d92oliChQjE2DROqG-3xH1f2xM/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1OJkqNnYnlVt947v3bmJcNizELQTj9e9BLTEiVMV43DA/edit?usp=drivesdk
-UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1wR7QtvOoSUjS_ncfNx9AryNJXJGLWTsmUaHKmgg24GU/edit?usp=drivesdk
-Dinas Pendidikan dan Kebudayaan|https://docs.google.com/spreadsheets/d/1V8I8-ve_N896BAIfCZ-8_8m7RJVV4gCXrExN9-iAnOI/edit?usp=drivesdk`.trim().split('\n').map(row => row.split('|')));
+const KERTAS_KERJA_URL_TERBARU = Object.fromEntries(`Dinas Pendidikan dan Kebudayaan|https://docs.google.com/spreadsheets/d/177KEdmHcxKY92nu6kBpgpaLmN7Q1Zcg29wNMmbbliQ4/edit?usp=drivesdk
+SANGGAR KEGIATAN BELAJAR KAB. PATI|https://docs.google.com/spreadsheets/d/195cmKK5J7qO3LHu7LzPOb_oJjXOP8yj2im5AjNk-d9Y/edit?usp=drivesdk
+Taman Kanak Kanak Negeri Pati|https://docs.google.com/spreadsheets/d/14o8gt-HX97BVVWCbXOdYllQxuIvcsD9-HJZtqMKU8tU/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN BATANGAN|https://docs.google.com/spreadsheets/d/1v75B2859FiFAN9GPHQPptTNOq0-PUNa1-ZLjF0JKwqE/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN CLUWAK|https://docs.google.com/spreadsheets/d/1Dn0iO-94aYUn5rf4vA3nGaskc23Mq3DeRO6EWjZnb60/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN DUKUHSETI|https://docs.google.com/spreadsheets/d/1OOvuWc1VlgKDGW3PZ77GgHvI8ZESzQ88lt3X48-r4MM/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GABUS|https://docs.google.com/spreadsheets/d/1zzm08TiVyQvlYN_I38ruo_lhBqIAvPPUzvUEvU0aFyQ/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GEMBONG|https://docs.google.com/spreadsheets/d/1c991HTIPPNUYfNNM4w28d6CLlyfAfQdP271xCSiSBhU/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1g2U26ZZMhVQaimIsndaORKw5SCzITWKo0iqYMpsbGn0/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JAKEN|https://docs.google.com/spreadsheets/d/1ZabvxSRDAQkj2D-eU_fEnKeuny2UWYoKATvTYUi4_sk/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JAKENAN|https://docs.google.com/spreadsheets/d/1FXORxaX26odLMMPMKtpCc9anZlg42XSNk1KcLtgOCLU/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN JUWANA|https://docs.google.com/spreadsheets/d/1nWCI9oFNTsRV9Zz4I6AAvP8My3TruOXU3pe9cvAA9VM/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN KAYEN|https://docs.google.com/spreadsheets/d/13CuPqzUNFus1eGMyu8JDwcmJf1eyqRi1lcFrM1zGiXo/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN MARGOREJO|https://docs.google.com/spreadsheets/d/1U4CnFLT7z0uMHgimm6-fTZAxArBPki6gUS1FCry4_gc/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN MARGOYOSO|https://docs.google.com/spreadsheets/d/1PK1JFl9zpOaG5H8kBqYam4vTaTxkLBtd2aELUwMPCyE/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN PATI|https://docs.google.com/spreadsheets/d/1BM6eCoYTKlfqO2P6mjlkNOTh6lRF3C9Y26fkSEL8q54/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN PUCAKWANGI|https://docs.google.com/spreadsheets/d/1zyAlW8aBBDfGeSKXVThh3LkeiYrhLtEDyrU4SgJaGmk/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN SUKOLILO|https://docs.google.com/spreadsheets/d/1frkgkS3SBjGOS49fUix9ZH1CYzd-2c1KN1Yt-OGIEM4/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TAMBAKROMO|https://docs.google.com/spreadsheets/d/1Fao2f5plrhaTYk9RjUTzOvq2dZYT2EGwTfiMqN207tE/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TAYU|https://docs.google.com/spreadsheets/d/1i1nPwfTL1O_PaQKF5ceQUgZ5VE5WFxFsOlqnkLlGZys/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1LPDflu7tWsmrxJr02hExzvkoCAfapULk6uKMguCPkv8/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN TRANGKIL|https://docs.google.com/spreadsheets/d/1zd-ylRPD4mAKTDcb0DAgQas9fm99pD1jBpWBbqJDIsw/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1hQfP1YyGwEUurnrxMuDAbK5eBGRjT3zO67ipZjCs9XI/edit?usp=drivesdk
+UPTD PENDIDIKAN KECAMATAN WINONG|https://docs.google.com/spreadsheets/d/1OFLaIfgmDSKRTaNIHJaJWcSwy1fB_Acfen1BJ65fiB0/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP BATANGAN|https://docs.google.com/spreadsheets/d/1KwXld0TGiXnsSe-idJ6umXb-XuE2naj70NNxoNkL5U4/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP CLUWAK|https://docs.google.com/spreadsheets/d/1k3P__vIagX4bm1X7ZfOB4-xJsOx3e-idAnei_J1MiPY/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP DUKUHSETI|https://docs.google.com/spreadsheets/d/1hiUjawynXNCx4erK8xE2L8dHN1Vp9cIjYJTE7M0KLmE/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GABUS|https://docs.google.com/spreadsheets/d/1TTQ5PZffRSEbHCRRM8nmUYmL8RGBtgFXjYl2sLLXy4I/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GEMBONG|https://docs.google.com/spreadsheets/d/17ymtYlctWVK8HFvhxKxLHrBV2H90Zue9Bijg0ahRbZ8/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/13VOWvg_0l6iWKFxdx3MzUX_PcEUUWBIpuC49v1J0uxk/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JAKEN|https://docs.google.com/spreadsheets/d/1bfT8_TfPmBYTlGOyV8CDmSFo-BZ8DyNwHkggtw9-dlI/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JAKENAN|https://docs.google.com/spreadsheets/d/1nkPlTFFiFvECJ2iPqcO3xP_V4J3HpB4TMcwDH_nsgGA/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP JUWANA|https://docs.google.com/spreadsheets/d/1--0ahiyA6D5bUp6-QImeCj1jZUKG4YvMqX0vZjdmFNo/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP KAYEN|https://docs.google.com/spreadsheets/d/1UNleMNkJVMhAhZPuabD45VQapTU45sfoYL2cqaluT-I/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP MARGOREJO|https://docs.google.com/spreadsheets/d/1TIWx_h47z3saKis23-cYtGI_hnjxnZ7diwwuXZfge7k/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP MARGOYOSO|https://docs.google.com/spreadsheets/d/1V_UegyBIDznCzgU8USFX3EwgenRYCJvJHO_ZYiGPtyI/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP PATI|https://docs.google.com/spreadsheets/d/1zY6NQoVhEpMSUAGIG5dty5S-pjhAwxnyQj9zvMucvB8/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP PUCAKWANGI|https://docs.google.com/spreadsheets/d/1I9iKhWhcX33ju-vsIjF4EC_clfJsLaHFwaUWlE6P29E/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP SUKOLILO|https://docs.google.com/spreadsheets/d/1ggO2W_rXBScDlUhMueSSKhwQDyDSJRHUp-97nQONgAQ/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TAMBAKROMO|https://docs.google.com/spreadsheets/d/1dEl5Xjoih9Q55TJNxgd8dZUreTOCuA_RyvfxJie7-9g/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TAYU|https://docs.google.com/spreadsheets/d/1YmLqBbm_ioNJf-wPJ_Ei0EFc-I4i5eSWDc8R3w9qZEY/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TLOGOWUNGU|https://docs.google.com/spreadsheets/d/1FErx2o4GsWn2W0dRrvhRzpVVPuMJ7hcoWigiW09nbnM/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP TRANGKIL|https://docs.google.com/spreadsheets/d/1Y5vvg_OzCtCCJvvg8PuIYuMOAeS5U8cjqE_0rqI0Z4s/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP WEDARIJAKSA|https://docs.google.com/spreadsheets/d/1xRdypxD5Sb5wx6is-C631iHyIHMruvMV2Cor6dp5W58/edit?usp=drivesdk
+UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1D3u8GSLGNVUw5hyI6zdzEiD2oiMd4sLOVrrBBwkHK2M/edit?usp=drivesdk`.trim().split('\n').map(row => row.split('|')));
 const KERTAS_KERJA_URL = {...KERTAS_KERJA_URL_LAMA, ...KERTAS_KERJA_URL_TERBARU};
 
 const OPD_DISPLAY_NAMES = Object.fromEntries(`Badan Kepegawaian Dan Pengembangan SDM|BKPSDM
