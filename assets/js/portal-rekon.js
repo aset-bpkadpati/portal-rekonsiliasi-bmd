@@ -137,7 +137,41 @@ UPTD PENDIDIKAN SMP WINONG|https://docs.google.com/spreadsheets/d/1ZVJA7xN2VVXPG
 
 // ID terbaru berikut dipakai untuk Triwulan I dan II.
 // Perangkat daerah yang tidak tercantum tetap menggunakan ID sebelumnya.
-const KERTAS_KERJA_URL_TERBARU = Object.fromEntries(`Dinas Pendidikan dan Kebudayaan|https://docs.google.com/spreadsheets/d/177KEdmHcxKY92nu6kBpgpaLmN7Q1Zcg29wNMmbbliQ4/edit?usp=drivesdk
+const KERTAS_KERJA_URL_TERBARU = Object.fromEntries(`Dinas Kesehatan|https://docs.google.com/spreadsheets/d/1tSVt9wnQqGla1vCWeSutb-ngvrVXp0gjTu9TGJGhXPU/edit?usp=drivesdk
+GUDANG FARMASI|https://docs.google.com/spreadsheets/d/1mpEkHNqYp8xnqIKyyHXckijfz3d015PGOqSZxvg5SnQ/edit?usp=drivesdk
+LABKESDA|https://docs.google.com/spreadsheets/d/1b9s1LtqCPA55T8LbOmLrX_WvbqArnzKocQiWFumy7L0/edit?usp=drivesdk
+PUSKESMAS BATANGAN I|https://docs.google.com/spreadsheets/d/1nwfpUAS_u2rXF6pJicI4xYX4xm0zBjLIuCZevnd3lHA/edit?usp=drivesdk
+PUSKESMAS CLUWAK I|https://docs.google.com/spreadsheets/d/1WCwOvnoVvpGLnPUypdohi-TszG7GmPCqqBL_icsgqxs/edit?usp=drivesdk
+PUSKESMAS DUKUHSETI|https://docs.google.com/spreadsheets/d/1opWFsiIOBmF__w22WMzjaLYKfvgCIl_sKqt8nsD9IW8/edit?usp=drivesdk
+PUSKESMAS GABUS I|https://docs.google.com/spreadsheets/d/1LGJnbVclESTckpevIr1SMhCwEgzywF0hzV2KY98jUcQ/edit?usp=drivesdk
+PUSKESMAS GABUS II|https://docs.google.com/spreadsheets/d/1pBbV9N-IngveZOF4nHENRXUS7_L6r63GuwEfv5RYf48/edit?usp=drivesdk
+PUSKESMAS GEMBONG I|https://docs.google.com/spreadsheets/d/1ZL-u7agHncwUYdNEt0-_nqykqdhv2uYS0oONyJ2yAIU/edit?usp=drivesdk
+PUSKESMAS GUNUNGWUNGKAL|https://docs.google.com/spreadsheets/d/1pu9gyq0Ya1J8DL_frpunM4EEIIEQplWYfns1Vgc0G0M/edit?usp=drivesdk
+PUSKESMAS JAKEN I|https://docs.google.com/spreadsheets/d/1l2VdgIHwxI7q73tgEP7agvEZUf3lLUfaLPv_hHZb30I/edit?usp=drivesdk
+PUSKESMAS JAKENAN I|https://docs.google.com/spreadsheets/d/1b3eNm3eWykHpV3Z-BWT-pPhDKzhTpqUppNAZlpRr7d8/edit?usp=drivesdk
+PUSKESMAS JUWANA|https://docs.google.com/spreadsheets/d/1oHDR9TsKB38Nq35F0Txsl7g3B6sSBbfjBR1dS6ZcThA/edit?usp=drivesdk
+PUSKESMAS KAYEN|https://docs.google.com/spreadsheets/d/1Nw8F9BTR_J6ox6dwYJna6XS_0xTxVBOLZ3Nm2-rVEjo/edit?usp=drivesdk
+PUSKESMAS MARGOREJO I|https://docs.google.com/spreadsheets/d/1Cl5wM7sII90F06FZrI5ExYG3dSod5Svqf7HRFZEI3rw/edit?usp=drivesdk
+PUSKESMAS MARGOYOSO I|https://docs.google.com/spreadsheets/d/1MT0b88yNWmqX_LuOqinuKlq7n6m8YTy5EtKoNPfItH0/edit?usp=drivesdk
+PUSKESMAS MARGOYOSO II|https://docs.google.com/spreadsheets/d/1rvJD-yTpMS-qM96YC0LDIJsBpukMWbhYt5VNkGE57i4/edit?usp=drivesdk
+PUSKESMAS PATI I|https://docs.google.com/spreadsheets/d/1M8qigcbzQj9gCZeFlmuABCanr6Z76k7_1LB_0YNKNkE/edit?usp=drivesdk
+PUSKESMAS PATI II|https://docs.google.com/spreadsheets/d/1jbwOkD3M-oaTr5pYLb_f8RT2C5FzEE-iRlbd1UY2wvc/edit?usp=drivesdk
+PUSKESMAS PUCAKWANGI I|https://docs.google.com/spreadsheets/d/13Vzillet64BjW7VoCfIYopcr-6wTPjBP-OAknymYvUQ/edit?usp=drivesdk
+PUSKESMAS PUCAKWANGI II|https://docs.google.com/spreadsheets/d/1ZVeeIS9bPNljLakabfs626ZSp3kCReRnhFmop0sSb40/edit?usp=drivesdk
+PUSKESMAS SUKOLILO I|https://docs.google.com/spreadsheets/d/1FylDXjcvRaEPTDf56DTSuRrYYDoKzlwJZClalW0bTDc/edit?usp=drivesdk
+PUSKESMAS SUKOLILO II|https://docs.google.com/spreadsheets/d/10VIq_z4zNyHBcOCnbK__IbknfiHxbJ4XPcSyNJfP-8E/edit?usp=drivesdk
+PUSKESMAS TAMBAKROMO|https://docs.google.com/spreadsheets/d/12baf272uhukVwbN-SaipTx5jrSTVcg28ZOWnPbosypY/edit?usp=drivesdk
+PUSKESMAS TAYU I|https://docs.google.com/spreadsheets/d/1z4EBKyzThZuTidT0BEQsyjWgAUw6X-541ulLfs7diS4/edit?usp=drivesdk
+PUSKESMAS TAYU II|https://docs.google.com/spreadsheets/d/17mrZLDtwwitMnvPJaSktz57N5udqweevFGmtfN1fPwA/edit?usp=drivesdk
+PUSKESMAS TLOGOWUNGU|https://docs.google.com/spreadsheets/d/17ojuBQYfz4lKQ1xGwg_wcu4k3IpY7r9RcV6iMi4wJgs/edit?usp=drivesdk
+PUSKESMAS TRANGKIL I|https://docs.google.com/spreadsheets/d/1bp0oMENV0O7wj3amr9BLuLrC_qG5z6TCPjHs18hRt-M/edit?usp=drivesdk
+PUSKESMAS WEDARIJAKSA I|https://docs.google.com/spreadsheets/d/1BQuybAn0LoZ9TLJ6nD0EAtRKJfnoXE0QRSmahfGdV94/edit?usp=drivesdk
+PUSKESMAS WEDARIJAKSA II|https://docs.google.com/spreadsheets/d/1jmoB7ce9vi8MgXx6sTcTJc8ZXTzbbFk-L3uyd0jHxac/edit?usp=drivesdk
+PUSKESMAS WINONG I|https://docs.google.com/spreadsheets/d/1kuMdaDRZ3c0BzQfWTcebqXkrZJlI0RolW9uvaOoxRyE/edit?usp=drivesdk
+PUSKESMAS WINONG II|https://docs.google.com/spreadsheets/d/1sUU7kOEYMdcyS01DFpbkcfNI2OTrppP4y8xUWX7rMDs/edit?usp=drivesdk
+Rumah Sakit Umum Daerah Kayen|https://docs.google.com/spreadsheets/d/1esOW90X7yG3Rnlpa8Jan8XA0HToyM7v9Oatus6u_6bM/edit?usp=drivesdk
+Rumah Sakit Umum Daerah RAA Soewondo|https://docs.google.com/spreadsheets/d/1gLvwg4geINPMDFBVQI-Dg3FMQ4y5cEi_nrgLOVcQ7iw/edit?usp=drivesdk
+Dinas Pendidikan dan Kebudayaan|https://docs.google.com/spreadsheets/d/177KEdmHcxKY92nu6kBpgpaLmN7Q1Zcg29wNMmbbliQ4/edit?usp=drivesdk
 SANGGAR KEGIATAN BELAJAR KAB. PATI|https://docs.google.com/spreadsheets/d/195cmKK5J7qO3LHu7LzPOb_oJjXOP8yj2im5AjNk-d9Y/edit?usp=drivesdk
 Taman Kanak Kanak Negeri Pati|https://docs.google.com/spreadsheets/d/14o8gt-HX97BVVWCbXOdYllQxuIvcsD9-HJZtqMKU8tU/edit?usp=drivesdk
 UPTD PENDIDIKAN KECAMATAN BATANGAN|https://docs.google.com/spreadsheets/d/1v75B2859FiFAN9GPHQPptTNOq0-PUNa1-ZLjF0JKwqE/edit?usp=drivesdk
