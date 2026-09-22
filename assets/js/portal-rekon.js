@@ -366,19 +366,208 @@ const PORTAL_CONFIG = {
 };
 
 function renderOpdList() {
+
+  // ==========================================
+  // PENGATURAN AKSES REKONSILIASI
+  // ==========================================
+
+  // true  = Rekon TW II ditutup
+  // false = Semua link dibuka kembali
+
+  const REKON_TW_II_DITUTUP = true;
+
+
+  // ==========================================
+  // ELEMENT PORTAL
+  // ==========================================
+
   const grid = document.querySelector('[data-opd-grid]');
   if (!grid) return;
+
   const count = document.querySelector('[data-opd-count]');
   const search = document.querySelector('[data-opd-search]');
-  const draw = () => {
-    const query = (search?.value || '').toLowerCase().trim();
-    const rows = PORTAL_CONFIG.opd.filter(item => item.name.toLowerCase().includes(query));
-    grid.innerHTML = rows.map(item => item.url
-      ? `<a class="opd-link" href="${item.url}" target="_blank" rel="noopener"><span>${item.name}</span><i class="bx bx-link-external"></i></a>`
-      : `<span class="opd-link disabled" title="Tautan Google Sheet belum diatur"><span>${item.name}</span><i class="bx bx-time-five"></i></span>`).join('');
-    count.textContent = `${rows.length} perangkat daerah ditampilkan`;
+
+
+  // ==========================================
+  // DAFTAR OPD YANG TETAP AKTIF
+  // ==========================================
+
+  const aksesDiizinkan = (nama) => {
+
+    if (!REKON_TW_II_DITUTUP) return true;
+
+    const opd = nama.toUpperCase().trim();
+
+    return (
+      opd === 'DINAS KESEHATAN' ||
+      opd === 'DINKES' ||
+      opd === 'GUDANG FARMASI' ||
+      opd === 'LABKESDA' ||
+      opd.startsWith('PUSKESMAS ') ||
+      opd === 'RUMAH SAKIT UMUM DAERAH KAYEN' ||
+      opd === 'RUMAH SAKIT UMUM DAERAH RAA SOEWONDO' ||
+      opd === 'RSUD KAYEN' ||
+      opd === 'RSUD SOEWONDO'
+    );
+
   };
-  search?.addEventListener('input', draw); draw();
+
+
+  // ==========================================
+  // NOTIFIKASI PENUTUPAN REKONSILIASI
+  // ==========================================
+
+  const noticeLama = document.querySelector(
+    '[data-rekon-notice]'
+  );
+
+  if (noticeLama) noticeLama.remove();
+
+  if (REKON_TW_II_DITUTUP) {
+
+    const notice = document.createElement('div');
+
+    notice.setAttribute('data-rekon-notice', '');
+
+    notice.setAttribute('role', 'status');
+
+    notice.style.cssText = `
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin-bottom: 18px;
+      color: #9a3412;
+      line-height: 1.7;
+      font-size: 14px;
+    `;
+
+    notice.innerHTML = `
+      <div style="
+        font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 6px;
+      ">
+        🔒 Rekonsiliasi Triwulan II Tahun 2026 Ditutup
+      </div>
+
+      <div>
+        Akses kertas kerja rekonsiliasi BMD Triwulan II
+        Tahun 2026 telah ditutup.
+
+        Tautan perangkat daerah dinonaktifkan sementara,
+        kecuali Dinas Kesehatan beserta unit pelaksananya,
+        termasuk Puskesmas, Labkesda, Gudang Farmasi,
+        dan Rumah Sakit Umum Daerah.
+      </div>
+    `;
+
+    grid.parentNode.insertBefore(notice, grid);
+
+  }
+
+
+  // ==========================================
+  // RENDER KARTU PERANGKAT DAERAH
+  // ==========================================
+
+  const draw = () => {
+
+    const query = (search?.value || '')
+      .toLowerCase()
+      .trim();
+
+    const rows = PORTAL_CONFIG.opd.filter(item =>
+      item.name.toLowerCase().includes(query)
+    );
+
+
+    grid.innerHTML = rows.map(item => {
+
+      // Periksa apakah OPD diizinkan
+      const diizinkan = aksesDiizinkan(item.name);
+
+      // Link aktif apabila URL tersedia
+      // dan OPD termasuk daftar pengecualian
+      const aktif = Boolean(item.url) && diizinkan;
+
+
+      // ======================================
+      // LINK AKTIF
+      // ======================================
+
+      if (aktif) {
+
+        return `
+          <a
+            class="opd-link"
+            href="${item.url}"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span>${item.name}</span>
+            <i class="bx bx-link-external"></i>
+          </a>
+        `;
+
+      }
+
+
+      // ======================================
+      // LINK NONAKTIF
+      // ======================================
+
+      const keterangan = !item.url
+        ? 'Tautan kertas kerja belum tersedia'
+        : 'Rekonsiliasi Triwulan II Tahun 2026 telah ditutup';
+
+
+      return `
+        <span
+          class="opd-link disabled"
+          aria-disabled="true"
+          title="${keterangan}"
+          style="
+            opacity: 0.5;
+            cursor: not-allowed;
+            pointer-events: none;
+          "
+        >
+          <span>${item.name}</span>
+          <i class="bx bx-lock-alt"></i>
+        </span>
+      `;
+
+    }).join('');
+
+
+    // ======================================
+    // JUMLAH PERANGKAT DAERAH
+    // ======================================
+
+    if (count) {
+
+      count.textContent =
+        `${rows.length} perangkat daerah ditampilkan`;
+
+    }
+
+  };
+
+
+  // ==========================================
+  // FITUR PENCARIAN
+  // ==========================================
+
+  search?.addEventListener('input', draw);
+
+
+  // ==========================================
+  // TAMPILKAN DATA
+  // ==========================================
+
+  draw();
+
 }
 
 function fillOpdSelect() {
