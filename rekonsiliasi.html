@@ -1,3 +1,66 @@
 <!doctype html>
-<html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Rekonsiliasi BMD</title><link rel="icon" href="assets/img/logo_pati.png"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet"><link href="assets/css/portal-rekon.css" rel="stylesheet"></head>
-<body><header class="site-header"><nav class="container nav"><a class="brand" href="index.html"><img src="assets/img/logo_pati.png" alt="Logo Kabupaten Pati"><span><small>BPKAD Kabupaten Pati</small>Portal Rekonsiliasi BMD</span></a><div class="nav-links"><a href="index.html">Beranda</a><a href="triwulan-1.html">Triwulan I</a><a href="triwulan-2.html">Triwulan II</a></div></nav></header><main><section class="page-head"><div class="container"><span class="eyebrow">Daftar perangkat daerah</span><h1>Rekonsiliasi Aset Tetap <span data-period>Triwulan I</span></h1><p>Klik nama perangkat daerah untuk membuka lembar kerja rekonsiliasi aset tetap.</p></div></section><section class="content container"><div class="toolbar"><label class="search"><i class="bx bx-search"></i><input data-opd-search type="search" placeholder="Cari nama perangkat daerah atau kecamatan..."></label><span class="counter" data-opd-count></span></div><div class="opd-grid" data-opd-grid></div></section></main><footer class="site-footer"><div class="container"><span><strong>Bidang Aset</strong> · BPKAD Kabupaten Pati</span><span data-period>Triwulan I</span></div></footer><script src="assets/js/portal-rekon.js"></script></body></html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Daftar Perangkat Daerah | Portal Rekonsiliasi BMD</title>
+  <link rel="icon" href="assets/img/logo_pati.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/portal-rekon.css" rel="stylesheet">
+  <link href="assets/css/asset-dashboard.css?v=20260929-1" rel="stylesheet">
+  <link href="assets/css/responsive.css?v=20260929-2" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html"><img src="assets/img/logo_pati.png" alt="Logo Kabupaten Pati"><span><small>BPKAD Kabupaten Pati</small>Portal Rekonsiliasi BMD</span></a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a class="active" href="rekonsiliasi.html">Rekon Aset Tetap</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-head directory-head">
+      <div class="container">
+        <h1>Daftar Perangkat Daerah</h1>
+        <p>Pilih perangkat daerah atau unit untuk membuka halaman Rekonsiliasi, melihat status setiap triwulan, dan menuju kertas kerja.</p>
+      </div>
+    </section>
+
+    <section class="content container directory-content">
+      <div class="directory-overview">
+        <div><span>Perangkat daerah dan unit terhubung</span><strong data-opd-total>0</strong></div>
+        <p><i class="bx bx-shield-quarter"></i> Hak baca dan edit kertas kerja mengikuti izin yang diatur langsung pada Google Sheet.</p>
+      </div>
+
+      <div class="directory-toolbar">
+        <label class="search directory-search">
+          <i class="bx bx-search"></i>
+          <input data-opd-search type="search" placeholder="Cari perangkat daerah atau unit..." aria-label="Cari perangkat daerah atau unit">
+        </label>
+        <div class="directory-tools">
+          <span data-opd-count>131 perangkat daerah/unit</span>
+        </div>
+      </div>
+
+      <div class="asset-status-table-wrap">
+        <table class="asset-status-table directory-table">
+          <thead><tr><th>No.</th><th>Perangkat daerah/unit</th><th>Aksi</th></tr></thead>
+          <tbody data-opd-table></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span><strong>Bidang Aset</strong> &middot; BPKAD Kabupaten Pati</span><span>Direktori Rekonsiliasi BMD</span></div>
+  </footer>
+  <script src="assets/js/opd-directory-data.js?v=20260929-1"></script>
+  <script src="assets/js/asset-dashboard.js?v=20260929-4"></script>
+</body>
+</html>

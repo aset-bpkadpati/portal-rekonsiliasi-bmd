@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Detail Perangkat Daerah | Portal Rekonsiliasi BMD</title>
+  <link rel="icon" href="assets/img/logo_pati.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/css/portal-rekon.css" rel="stylesheet">
+  <link href="assets/css/asset-dashboard.css?v=20260929-2" rel="stylesheet">
+  <link href="assets/css/responsive.css?v=20260929-2" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="container nav">
+      <a class="brand" href="index.html"><img src="assets/img/logo_pati.png" alt="Logo Kabupaten Pati"><span><small>BPKAD Kabupaten Pati</small>Portal Rekonsiliasi BMD</span></a>
+      <div class="nav-links">
+        <a href="index.html">Beranda</a>
+        <a class="active" href="rekonsiliasi.html">Rekon Aset Tetap</a>
+      </div>
+    </nav>
+  </header>
+
+  <main data-opd-detail-page>
+    <section class="page-head opd-detail-head">
+      <div class="container">
+        <a class="detail-back" href="rekonsiliasi.html"><i class="bx bx-left-arrow-alt"></i> Kembali ke Rekon Aset Tetap</a>
+        <span class="eyebrow" data-opd-group>Perangkat Daerah</span>
+        <h1 data-opd-name>Perangkat Daerah</h1>
+        <p data-opd-description>Pantau status Rekonsiliasi dan pengumpulan laporan BMD setiap triwulan.</p>
+      </div>
+    </section>
+
+    <section class="content container opd-detail-content">
+      <div class="opd-sheet-card">
+        <div class="opd-sheet-icon"><i class="bx bx-spreadsheet"></i></div>
+        <div>
+          <span>Kertas kerja Rekonsiliasi</span>
+          <h2 data-sheet-title>Google Sheet Aset Tetap</h2>
+          <p>Akses baca atau edit mengikuti pengaturan izin pada Google Sheet.</p>
+        </div>
+        <div class="opd-sheet-actions">
+          <a class="button opd-sheet-link" data-sheet-link href="#" target="_blank" rel="noopener noreferrer">Buka Form 5 <i class="bx bx-link-external"></i></a>
+          <a class="button opd-report-link" data-report-upload-link href="#">Upload Laporan BMD <i class="bx bx-cloud-upload"></i></a>
+        </div>
+      </div>
+
+      <div data-opd-status-section>
+        <div class="opd-status-heading">
+          <div><span class="section-kicker">Tahun 2026</span><h2>Status per triwulan</h2><p>Status laporan terdiri dari dokumen Aset Tetap dan Persediaan.</p></div>
+          <small data-opd-updated>Status belum diperbarui</small>
+        </div>
+        <div class="directory-message" data-opd-message aria-live="polite">Memuat status...</div>
+        <div class="asset-status-table-wrap">
+          <table class="asset-status-table opd-quarter-table">
+            <thead><tr><th>Periode</th><th>Status Rekon Aset Tetap</th><th>Laporan Aset Tetap</th><th>Laporan Persediaan</th><th>Status Pengumpulan</th></tr></thead>
+            <tbody data-opd-quarter-table><tr><td colspan="5" class="directory-empty">Memuat data...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container"><span><strong>Bidang Aset</strong> &middot; BPKAD Kabupaten Pati</span><span>Informasi Rekonsiliasi BMD</span></div>
+  </footer>
+  <script src="assets/js/opd-directory-data.js?v=20260929-1"></script>
+  <script src="assets/js/api-client.js?v=20260929-3"></script>
+  <script src="assets/js/opd-detail.js?v=20260929-12"></script>
+</body>
+</html>

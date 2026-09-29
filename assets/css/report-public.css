@@ -1,0 +1,36 @@
+.public-report-flow .page-head .back-link,
+.form-wrap > .back-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-bottom: 20px;
+  line-height: 1.35;
+}
+
+.public-report-flow .page-head .back-link > i,
+.form-wrap > .back-link > i {
+  display: block;
+  flex: 0 0 auto;
+  font-size: 1rem;
+  line-height: 1;
+  transform: translateY(1px);
+}
+
+.public-report-flow .page-head .eyebrow,
+.form-wrap > .eyebrow {
+  display: flex;
+  width: fit-content;
+  margin-bottom: 14px;
+}
+
+.form-wrap > .back-link {
+  color: var(--blue);
+}
+
+@media (max-width: 520px) {
+  .public-report-flow .page-head .back-link,
+  .form-wrap > .back-link {
+    margin-bottom: 16px;
+  }
+}

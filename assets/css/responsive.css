@@ -1,0 +1,116 @@
+/* Responsive layer for the public portal, directory, and OPD detail pages. */
+html,body { min-height:100%; }
+body { min-height:100vh; display:flex; flex-direction:column; }
+body>main { flex:1 0 auto; }
+body>.site-footer { flex-shrink:0; }
+
+@media (max-width: 900px) {
+  .container { padding-left: 20px; padding-right: 20px; }
+  .content { padding-top: 40px; padding-bottom: 56px; }
+  .nav-links a { min-height: 42px; display: inline-flex; align-items: center; }
+  .button { min-height: 44px; }
+
+  .public-report-summary { grid-template-columns: 1fr 1fr; }
+  .nav-links a.public-login-link { display: inline-flex; }
+  .public-report-table-wrap,.asset-status-table-wrap { -webkit-overflow-scrolling: touch; }
+  .public-report-period select,.public-report-search input,.public-report-refresh { min-height: 44px; }
+
+  .directory-overview,.directory-toolbar,.opd-status-heading { align-items: stretch; flex-direction: column; }
+  .directory-search { width: 100%; }
+  .directory-tools { justify-content: space-between; }
+  .directory-tools button { min-height: 44px; }
+  .opd-sheet-card { grid-template-columns: auto 1fr; }
+  .opd-sheet-link { grid-column: 1/-1; justify-content: center; min-height: 46px; }
+}
+
+@media (max-width: 760px) {
+  .page-head { padding: 34px 0 27px; }
+  .page-head h1 { font-size: clamp(27px,8vw,34px); line-height: 1.16; }
+  .page-head p { font-size: 14px; }
+  .section-heading h2 { font-size: 25px; }
+  .nav { gap: 10px; }
+  .nav-links { gap: 4px; }
+  .nav-links a { padding: 8px 10px; }
+  .search { min-height: 46px; }
+  .site-footer { padding: 22px 0; }
+}
+
+@media (max-width: 650px) {
+  .public-report-heading,.public-report-toolbar { align-items: stretch; flex-direction: column; }
+  .public-report-period,.public-report-search { width: 100%; }
+  .public-report-tools { justify-content: space-between; }
+  .portal-simple-hero::after { display: none; }
+  .portal-simple-hero-content { min-height: 340px; padding-top: 42px; padding-bottom: 42px; }
+  .portal-simple-hero h1 { font-size: 2.55rem; }
+  .portal-simple-hero .hero-actions { width: 100%; align-items: stretch; }
+  .portal-simple-hero .hero-actions .button,.portal-simple-hero .simple-status-link { width: 100%; min-height: 46px; justify-content: center; }
+
+  .public-report-table { display: block; min-width: 0; }
+  .public-report-table thead { display: none; }
+  .public-report-table tbody { display: grid; gap: 12px; }
+  .public-report-table tbody tr { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 4px 16px rgba(10,39,71,.05); }
+  .public-report-table tbody td { width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: right; }
+  .public-report-table tbody td:last-child { border-bottom: 0; }
+  .public-report-table tbody td::before { content: attr(data-label); flex: 0 0 40%; color: var(--muted); font-size: .64rem; font-weight: 800; letter-spacing: .25px; text-align: left; text-transform: uppercase; }
+  .public-report-table tbody td:first-child { width: 100%; display: block; background: #f8fbfe; text-align: left; }
+  .public-report-table tbody td:first-child::before { display: block; margin-bottom: 7px; }
+  .public-report-table td:last-child small { margin: 0 0 0 7px; }
+  .public-report-empty::before { display: none !important; }
+  .public-report-table-wrap { overflow: visible; border: 0; border-radius: 0; background: transparent; }
+}
+
+@media (max-width: 520px) {
+  .directory-overview { padding: 18px; }
+  .directory-overview > div { align-items: flex-start; flex-direction: column; gap: 2px; }
+  .directory-overview p { align-items: flex-start; line-height: 1.5; }
+  .directory-tools { align-items: stretch; flex-direction: column; }
+  .directory-tools span { white-space: normal; }
+  .directory-tools button { justify-content: center; width: 100%; }
+  .opd-sheet-card { grid-template-columns: 1fr; padding: 20px; }
+  .opd-sheet-icon { width: 50px; height: 50px; }
+  .opd-sheet-link { grid-column: auto; width: 100%; }
+  .opd-status-heading small { line-height: 1.45; }
+
+  .asset-status-table-wrap { overflow: visible; border: 0; border-radius: 0; background: transparent; box-shadow: none; }
+  .directory-table,.opd-quarter-table { display: block; min-width: 0; }
+  .directory-table thead,.opd-quarter-table thead { display: none; }
+  .directory-table tbody,.opd-quarter-table tbody { display: grid; gap: 12px; }
+  .directory-table tbody tr,.opd-quarter-table tbody tr { display: block; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; box-shadow: 0 4px 16px rgba(10,39,71,.05); }
+  .directory-table tbody td,.opd-quarter-table tbody td { width: 100%; min-width: 0; display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: right; }
+  .directory-table tbody td:last-child,.opd-quarter-table tbody td:last-child { border-bottom: 0; }
+  .directory-table tbody td::before,.opd-quarter-table tbody td::before { content: attr(data-label); flex: 0 0 42%; color: var(--muted); font-size: .64rem; font-weight: 800; letter-spacing: .25px; text-align: left; text-transform: uppercase; }
+  .directory-table .asset-row-number { display: none; }
+  .directory-table .asset-resource-name { display: block; text-align: left; }
+  .directory-table .asset-resource-name::before { display: block; margin-bottom: 7px; }
+  .directory-table .asset-resource-name a { font-size: .9rem; }
+  .directory-table .asset-table-action-cell { display: block; }
+  .directory-table .asset-table-action-cell::before { display: none; }
+  .directory-table .asset-table-action { width: 100%; min-height: 44px; justify-content: center; }
+  .opd-quarter-table td:first-child { width: 100%; background: #f4f8fc; }
+  .opd-quarter-table .asset-status-badge { justify-content: center; text-align: left; }
+}
+
+@media (max-width: 480px) {
+  .container { padding-left: 16px; padding-right: 16px; }
+  .nav { height: 64px; }
+  .brand { gap: 8px; }
+  .brand img { width: 40px; height: 40px; }
+  .brand small { display: none; }
+  .brand > span { font-size: 12px; line-height: 1.2; }
+  .nav-links a { font-size: 12px; padding: 8px; }
+  .content { padding-top: 30px; padding-bottom: 46px; }
+  .eyebrow { font-size: 10px; letter-spacing: 1px; }
+  .section-heading { margin-bottom: 20px; }
+  .site-footer .container { font-size: 12px; }
+
+  .portal-simple-hero-content { min-height: 315px; padding-top: 36px; padding-bottom: 36px; }
+  .portal-simple-hero h1 { font-size: 2.12rem; letter-spacing: -1.3px; }
+  .portal-simple-hero p { margin-top: 15px; font-size: .95rem; }
+  .hero-actions { margin-top: 23px; }
+  .public-report-summary { gap: 9px; }
+  .public-report-summary > div { padding: 15px; }
+  .public-report-summary strong { font-size: 1.4rem; }
+  .public-report-tools { align-items: stretch; flex-direction: column; }
+  .public-report-refresh { justify-content: center; width: 100%; }
+  .back-to-top { width: 44px; height: 44px; right: 14px; bottom: 14px; border-radius: 12px; }
+}
