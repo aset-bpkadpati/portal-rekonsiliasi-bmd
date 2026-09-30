@@ -1,5 +1,5 @@
 (() => {
-  const CACHE_PREFIX = 'portal_opd_detail_v2_';
+  const CACHE_PREFIX = 'portal_opd_detail_v4_';
 
   function escapeHtml(value) {
     const node = document.createElement('span');
@@ -142,7 +142,7 @@
   }
 
   document.addEventListener('DOMContentLoaded', async () => {
-    Object.keys(localStorage).filter(key => key.startsWith('portal_opd_detail_v1_')).forEach(key => localStorage.removeItem(key));
+    Object.keys(localStorage).filter(key => /^portal_opd_detail_v[123]_/.test(key)).forEach(key => localStorage.removeItem(key));
     const name = new URLSearchParams(location.search).get('nama');
     if (!name) { showError('Nama perangkat daerah belum dipilih.'); return; }
     const resource = localResource(name);

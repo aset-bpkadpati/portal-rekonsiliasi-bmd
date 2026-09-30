@@ -1,5 +1,5 @@
 (() => {
-  const CACHE_PREFIX = 'portal_report_status_v2_';
+  const CACHE_PREFIX = 'portal_report_status_v4_';
   let rows = [];
   let reportTypes = [];
   let loadSequence = 0;
@@ -121,7 +121,11 @@
   }
 
   document.addEventListener('DOMContentLoaded', () => {
-    ['I','II','III','IV'].forEach(period => localStorage.removeItem(`portal_report_status_v1_${period}`));
+    ['I','II','III','IV'].forEach(period => {
+      localStorage.removeItem(`portal_report_status_v1_${period}`);
+      localStorage.removeItem(`portal_report_status_v2_${period}`);
+      localStorage.removeItem(`portal_report_status_v3_${period}`);
+    });
     const period = document.querySelector('[data-public-report-period]');
     document.querySelector('[data-public-report-search]').addEventListener('input', render);
     const startLoad = () => {
